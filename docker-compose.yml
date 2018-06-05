@@ -1,0 +1,45 @@
+version: '3'
+
+networks:
+  cboard-network:
+    driver: bridge
+
+services:
+  mongodb:
+    image: mongo
+    restart: on-failure
+    ports:
+      - "27017:27017"
+    volumes:
+      - dbvol:/data/db
+    networks:
+      - cboard-network
+
+  cboard-api:
+    image: cboard/cboard-api
+    restart: on-failure
+    ports:
+      - "80:80"
+    environment:
+      - PORT=80
+      - MONGO_URL=mongodb://mongodb/cboard-api
+      - NODE_ENV=production
+      - SENDGRID_API_KEY
+      - JWT_SECRET
+    networks:
+      - cboard-network
+    depends_on:
+      - mongodb
+  
+  cboard:
+    image: cboard/cboard
+    restart: on-failure
+    ports:
+      - "5000:80"
+    networks:
+      - cboard-network
+    depends_on:
+      - cboard-api
+
+volumes:
+  dbvol: {}
