@@ -1,5 +1,5 @@
 
-# Cboard-Boostrapp  
+# Cboard-Bootstrapp  
 
 [Cboard](https://app.cboard.io/) is an augmentative and alternative communication (AAC) web application, allowing users with speech and language impairments (autism, cerebral palsy) to communicate by symbols and text-to-speech. This repo supports the CBoard front-end, providing backend functionality and persistence.
 
@@ -8,7 +8,7 @@ Docker bootstrap provides an easy way to manage the cboard container.
 
 ## How to use it
 
-To build the boostrap image:
+To build the Bootstrapp image:
 
 ```
 docker build -t cboard-bootstrap .
