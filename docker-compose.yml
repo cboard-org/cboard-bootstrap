@@ -11,7 +11,7 @@ services:
     ports:
       - "27017:27017"
     volumes:
-      - dbvol:/data/db
+      - "/data/db:/data/db"
     networks:
       - cboard-network
 
@@ -26,6 +26,7 @@ services:
       - NODE_ENV=production
       - SENDGRID_API_KEY
       - JWT_SECRET  
+  
     networks:
       - cboard-network
     depends_on:
@@ -35,11 +36,22 @@ services:
     image: cboard/cboard
     restart: on-failure
     ports:
+      - "443:443"
       - "80:80"
+    volumes:
+      - letsencrypt_certs:/etc/nginx/certs
+      - letsencrypt_www:/var/www/letsencrypt
     networks:
       - cboard-network
     depends_on:
       - cboard-api
-
+  
+  letsencrypt:
+    image: cboard/letsencrypt
+    command: /bin/true
+    volumes:
+      - letsencrypt_certs:/etc/letsencrypt
+      - letsencrypt_www:/var/www/letsencrypt
 volumes:
-  dbvol: {}
+  letsencrypt_certs: ~
+  letsencrypt_www: ~
