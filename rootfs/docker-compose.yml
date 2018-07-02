@@ -43,7 +43,7 @@
         - cboard-api
     
     letsencrypt:
-      image: cboard/letsencrypt
+      image: cboard/cboard-letsencrypt
       container_name: letsencrypt
       cap_add:
         - NET_ADMIN
