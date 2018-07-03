@@ -11,15 +11,15 @@ Docker bootstrap provides an easy way to manage the cboard container.
 To build the Bootstrapp image:
 
 ```
-docker build -t cboard-bootstrap .
+docker build -t cboard/cboard-bootstrap .
 ```
 
 To start up the container:
 ```
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock cboard-bootstrap up -d
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock cboard/cboard-bootstrap up -d
 ```
 
 To stop the container:
 ```
-docker run --rm -v /var/run/docker.sock:/var/run/docker.sock cboard-bootstrap down
+docker run --rm -v /var/run/docker.sock:/var/run/docker.sock cboard/cboard-bootstrap down
 ```
