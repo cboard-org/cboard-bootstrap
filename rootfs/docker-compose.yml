@@ -53,6 +53,8 @@
         - URL
         - SUBDOMAINS
         - VALIDATION
+        - PUID
+        - PGID
         - STAGING
         - TZ
         - EMAIL
