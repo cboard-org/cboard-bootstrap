@@ -27,6 +27,12 @@
         - SENDGRID_API_KEY
         - AZURE_STORAGE_CONNECTION_STRING
         - JWT_SECRET
+        - GOOGLE_APP_ID
+        - GOOGLE_APP_SECRET
+        - GOOGLE_CALLBACK_URL
+        - FACEBOOK_APP_ID
+        - FACEBOOK_APP_SECRET
+        - FACEBOOK_CALLBACK_URL
       networks:
         - cboard-network
       depends_on:
