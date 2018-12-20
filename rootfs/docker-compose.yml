@@ -48,6 +48,16 @@
       depends_on:
         - cboard-api
     
+    cboard-wiki:
+      image: cboard/cboard-wiki
+      restart: on-failure
+      ports:
+        - "5002:80"
+      environment:
+        - PORT=80
+      networks:
+        - cboard-network
+        
     letsencrypt:
       image: cboard/cboard-letsencrypt
       container_name: letsencrypt
