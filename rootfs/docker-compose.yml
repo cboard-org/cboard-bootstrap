@@ -45,6 +45,8 @@
         - "5001:80"
       networks:
         - cboard-network
+      volumes:
+        - "/cboard/auth:/auth"
       depends_on:
         - cboard-api
     
