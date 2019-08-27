@@ -1,4 +1,4 @@
-  version: '3'
+  version: '3.1'
 
   networks:
     cboard-network:
@@ -6,7 +6,7 @@
 
   services:
     mongodb:
-      image: mongo
+      image: mongo:latest
       restart: on-failure
       ports:
         - "27017:27017"
