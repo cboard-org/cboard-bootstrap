@@ -6,7 +6,7 @@
 
   services:
     mongodb:
-      image: mongo:latest
+      image: mongo:4.0
       restart: on-failure
       ports:
         - "27017:27017"
