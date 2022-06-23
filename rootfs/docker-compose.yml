@@ -33,6 +33,7 @@
         - FACEBOOK_APP_ID
         - FACEBOOK_APP_SECRET
         - FACEBOOK_CALLBACK_URL
+        - APPLICATIONINSIGHTS_CONNECTION_STRING
       networks:
         - cboard-network
       depends_on:
