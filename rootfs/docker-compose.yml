@@ -35,6 +35,8 @@
         - FACEBOOK_CALLBACK_URL
         - APPLICATIONINSIGHTS_CONNECTION_STRING
         - IP_INFO_TOKEN
+        - PAYPAL_API_CLIENT_ID
+        - PAYPAL_API_CLIENT_SECRET
       networks:
         - cboard-network
       depends_on:
