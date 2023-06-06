@@ -37,6 +37,9 @@
         - IP_INFO_TOKEN
         - PAYPAL_API_CLIENT_ID
         - PAYPAL_API_CLIENT_SECRET
+        - APPLE_APP_CLIENT_ID
+        - APPLE_TEAM_ID
+        - APPLE_KEY_ID
       networks:
         - cboard-network
       depends_on:
