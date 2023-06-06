@@ -40,6 +40,7 @@
         - APPLE_APP_CLIENT_ID
         - APPLE_TEAM_ID
         - APPLE_KEY_ID
+        - APPLE_CALLBACK_URL
       networks:
         - cboard-network
       depends_on:
