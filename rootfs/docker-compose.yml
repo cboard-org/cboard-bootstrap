@@ -42,6 +42,7 @@
         - APPLE_KEY_ID
         - APPLE_CALLBACK_URL
         - CBOARD_APP_URL
+        - SUBDOMAINS
       networks:
         - cboard-network
       depends_on:
