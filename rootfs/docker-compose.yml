@@ -43,6 +43,7 @@
         - APPLE_CALLBACK_URL
         - CBOARD_APP_URL
         - SUBDOMAINS
+        - AZURE_OPENAI_API_KEY
       networks:
         - cboard-network
       depends_on:
