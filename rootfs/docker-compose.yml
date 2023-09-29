@@ -44,6 +44,8 @@
         - CBOARD_APP_URL
         - SUBDOMAINS
         - AZURE_OPENAI_API_KEY
+        - APP_STORE_CONNECT_API_KEY_ID
+        - APP_STORE_CONNECT_API_ISSUER_ID
       networks:
         - cboard-network
       depends_on:
