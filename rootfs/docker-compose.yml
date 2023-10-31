@@ -10,6 +10,7 @@
       restart: on-failure
       ports:
         - "27017:27017"
+      entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "repset" ]
       volumes:
         - "/data/db:/data/db"
       networks:
