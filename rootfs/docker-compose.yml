@@ -49,7 +49,7 @@
       image: cboard/cboard
       restart: on-failure
       ports:
-        - "5001:80"
+        - "80:80"
       networks:
         - cboard-network
       volumes:
