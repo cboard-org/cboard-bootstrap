@@ -10,6 +10,7 @@
       restart: on-failure
       ports:
         - "27017:27017"
+      entrypoint: [ "/usr/bin/mongod", "--bind_ip_all", "--replSet", "repset" ]
       volumes:
         - "/data/db:/data/db"
       networks:
@@ -40,6 +41,12 @@
         - APPLE_APP_CLIENT_ID
         - APPLE_TEAM_ID
         - APPLE_KEY_ID
+        - APPLE_CALLBACK_URL
+        - CBOARD_APP_URL
+        - SUBDOMAINS
+        - AZURE_OPENAI_API_KEY
+        - APP_STORE_CONNECT_API_KEY_ID
+        - APP_STORE_CONNECT_API_ISSUER_ID
       networks:
         - cboard-network
       depends_on:
