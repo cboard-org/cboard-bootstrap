@@ -67,3 +67,15 @@
       networks:
         - cboard-network
 
+    cboard-nginx:
+      image: cboard/cboard-nginx
+      container_name: cboard-nginx
+      restart: on-failure
+      ports:
+        - "80:80"
+      networks:
+        - cboard-network
+      depends_on:
+        - cboard-api
+        - cboard
+        - cboard-wiki
