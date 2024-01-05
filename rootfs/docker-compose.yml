@@ -75,27 +75,16 @@
         - PORT=80
       networks:
         - cboard-network
-        
-    letsencrypt:
-      image: cboard/cboard-letsencrypt
-      container_name: letsencrypt
-      cap_add:
-        - NET_ADMIN
-      links:
-        - cboard
-      environment:
-        - URL
-        - SUBDOMAINS
-        - VALIDATION
-        - PUID
-        - PGID
-        - STAGING
-        - TZ
-        - EMAIL
-        - ONLY_SUBDOMAINS
+
+    cboard-nginx:
+      image: cboard/cboard-nginx
+      container_name: cboard-nginx
+      restart: on-failure
       ports:
-        - "443:443"
         - "80:80"
       networks:
         - cboard-network
-
+      depends_on:
+        - cboard-api
+        - cboard
+        - cboard-wiki
