@@ -50,6 +50,9 @@
         - APP_STORE_CONNECT_API_ISSUER_ID
         - GOOGLE_FIREBASE_WEB_CLIENT_ID
         - GOOGLE_FIREBASE_SIGN_IN_APP_ID
+        - PICTO_SERVER_ID
+        - PICTO_CHANNEL_ID
+        - PICTO_SALAI_TOKEN
       networks:
         - cboard-network
       depends_on:
