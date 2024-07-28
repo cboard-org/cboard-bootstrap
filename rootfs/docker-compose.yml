@@ -3,8 +3,6 @@
   networks:
     cboard-network:
       driver: bridge
-    cbuilder-network:
-      driver: bridge
 
   services:
     mongodb:
@@ -78,26 +76,13 @@
       networks:
         - cboard-network
 
-    cboard-nginx:
-      image: cboard/cboard-nginx
-      container_name: cboard-nginx
-      restart: on-failure
-      ports:
-        - "80:80"
-      networks:
-        - cboard-network
-      depends_on:
-        - cboard-api
-        - cboard
-        - cboard-wiki
-
-    cboard-ai-builder:
+    cboard-cbuilder:
       image: cboard/cboard-ai-builder
       restart: on-failure
       ports:
-        - "3000:3000"
+        - "5003:80"
       environment:
-        - PORT=3000
+        - PORT=80
         - MONGO_URL=mongodb://mongodb/cboard-ai-builder
         - NEXTAUTH_SECRET
         - NEXTAUTH_URL
@@ -118,7 +103,20 @@
         - CONTENT_SAFETY_ENDPOINT
         - CONTENT_SAFETY_KEY
       networks:
-        - cbuilder-network
+        - cboard-network
       depends_on:
         - mongodb
         - cboard-api
+
+    cboard-nginx:
+      image: cboard/cboard-nginx
+      container_name: cboard-nginx
+      restart: on-failure
+      ports:
+        - "80:80"
+      networks:
+        - cboard-network
+      depends_on:
+        - cboard-api
+        - cboard
+        - cboard-wiki
