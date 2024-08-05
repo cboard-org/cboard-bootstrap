@@ -102,6 +102,7 @@
         - OPENAI_BASE_PATH
         - CONTENT_SAFETY_ENDPOINT
         - CONTENT_SAFETY_KEY
+        - MYMIDJOURNEY_TOKEN
       networks:
         - cboard-network
       depends_on:
