@@ -103,6 +103,7 @@
         - CONTENT_SAFETY_ENDPOINT
         - CONTENT_SAFETY_KEY
         - MYMIDJOURNEY_TOKEN
+        - LEONARDO_TOKEN
       networks:
         - cboard-network
       depends_on:
