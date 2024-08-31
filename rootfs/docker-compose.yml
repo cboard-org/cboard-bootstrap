@@ -49,6 +49,7 @@
         - APP_STORE_CONNECT_API_ISSUER_ID
         - GOOGLE_FIREBASE_WEB_CLIENT_ID
         - GOOGLE_FIREBASE_SIGN_IN_APP_ID
+        - INTERNAL_API_KEY
       networks:
         - cboard-network
       depends_on:
@@ -104,6 +105,7 @@
         - CONTENT_SAFETY_KEY
         - MYMIDJOURNEY_TOKEN
         - LEONARDO_TOKEN
+        - INTERNAL_API_KEY
       networks:
         - cboard-network
       depends_on:
