@@ -50,6 +50,7 @@
         - GOOGLE_FIREBASE_WEB_CLIENT_ID
         - GOOGLE_FIREBASE_SIGN_IN_APP_ID
         - INTERNAL_API_KEY
+        - CBUILDER_API_URL
       networks:
         - cboard-network
       depends_on:
