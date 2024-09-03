@@ -50,7 +50,6 @@
         - GOOGLE_FIREBASE_WEB_CLIENT_ID
         - GOOGLE_FIREBASE_SIGN_IN_APP_ID
         - INTERNAL_API_KEY
-        - CBOARD_APP_URL_
       networks:
         - cboard-network
       depends_on:
@@ -107,6 +106,7 @@
         - MYMIDJOURNEY_TOKEN
         - LEONARDO_TOKEN
         - INTERNAL_API_KEY
+        - CBOARD_APP_URL_
       networks:
         - cboard-network
       depends_on:
