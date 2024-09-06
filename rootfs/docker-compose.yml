@@ -106,6 +106,8 @@
         - MYMIDJOURNEY_TOKEN
         - LEONARDO_TOKEN
         - INTERNAL_API_KEY
+        - LANGUAGE_KEY
+        - TEXT_TRANSLATOR_API_KEY
       networks:
         - cboard-network
       depends_on:
