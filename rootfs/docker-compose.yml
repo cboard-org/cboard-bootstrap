@@ -110,6 +110,7 @@
         - CBOARD_APP_URL_
         - LANGUAGE_KEY
         - TEXT_TRANSLATOR_API_KEY
+        - GA4_TRACKING_ID
       networks:
         - cboard-network
       depends_on:
