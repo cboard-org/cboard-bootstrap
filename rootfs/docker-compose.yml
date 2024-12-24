@@ -117,6 +117,40 @@
         - mongodb
         - cboard-api
 
+    fluid-mind:
+      image: cboard/fluid-mind
+      restart: on-failure
+      ports:
+        - "5004:80"
+      environment:
+        - PORT=80
+        - AZURE_FLOW_KEY
+        - AZURE_FLOW_DEPLOYMENT
+        - AZURE_FLOW_ENDPOINT
+        - AZURE_TALK_KEY
+        - AZURE_TALK_DEPLOYMENT
+        - AZURE_TALK_ENDPOINT
+        - MONGO_URL=mongodb://mongodb/Fluid-Mind
+        - JWT_SECRET
+        - EMAIL_SERVER_USER
+        - EMAIL_SERVER_PASSWORD
+        - EMAIL_SERVER_HOST
+        - EMAIL_SERVER_PORT
+        - EMAIL_FROM
+        - NEXTAUTH_SECRET
+        - NEXTAUTH_URL
+        - NODE_TLS_REJECT_UNAUTHORIZED=0
+        - NEXT_SHARP_PATH
+        - GOOGLE_APP_ID
+        - GOOGLE_APP_SECRET
+        - CONTENT_SAFETY_ENDPOINT
+        - CONTENT_SAFETY_KEY
+        - GA4_TRACKING_ID
+      networks:
+        - cboard-network
+      depends_on:
+        - mongodb
+
     cboard-nginx:
       image: cboard/cboard-nginx
       container_name: cboard-nginx
