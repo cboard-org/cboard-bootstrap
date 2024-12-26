@@ -130,22 +130,16 @@
         - AZURE_TALK_KEY
         - AZURE_TALK_DEPLOYMENT
         - AZURE_TALK_ENDPOINT
-        - MONGO_URL=mongodb://mongodb/Fluid-Mind
+        - MONGO_URL_FM=mongodb://mongodb/Fluid-Mind
         - JWT_SECRET
         - EMAIL_SERVER_USER
         - EMAIL_SERVER_PASSWORD
         - EMAIL_SERVER_HOST
         - EMAIL_SERVER_PORT
         - EMAIL_FROM
-        - NEXTAUTH_SECRET
-        - NEXTAUTH_URL
-        - NODE_TLS_REJECT_UNAUTHORIZED=0
-        - NEXT_SHARP_PATH
-        - GOOGLE_APP_ID
-        - GOOGLE_APP_SECRET
-        - CONTENT_SAFETY_ENDPOINT
-        - CONTENT_SAFETY_KEY
-        - GA4_TRACKING_ID
+        - NEXTAUTH_SECRET_FM
+        - NEXTAUTH_URL_FM
+        - GA4_TRACKING_ID_FM
       networks:
         - cboard-network
       depends_on:
