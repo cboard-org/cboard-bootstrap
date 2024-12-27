@@ -123,8 +123,6 @@
       ports:
         - "5004:80"
       environment:
-        - NEXT_PUBLIC_AZURE_SPEECH_KEY
-        - NEXT_PUBLIC_AZURE_SPEECH_REGION
         - PORT=80
         - AZURE_FLOW_KEY
         - AZURE_FLOW_DEPLOYMENT
@@ -142,6 +140,8 @@
         - NEXTAUTH_SECRET
         - NEXTAUTH_URL
         - GA4_TRACKING_ID_FM
+        - NEXT_PUBLIC_AZURE_SPEECH_KEY
+        - NEXT_PUBLIC_AZURE_SPEECH_REGION
       networks:
         - cboard-network
       depends_on:
