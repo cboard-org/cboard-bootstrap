@@ -137,7 +137,7 @@
         - EMAIL_SERVER_HOST
         - EMAIL_SERVER_PORT
         - EMAIL_FROM
-        - NEXTAUTH_SECRET_FM
+        - NEXTAUTH_SECRET
         - NEXTAUTH_URL_FM
         - GA4_TRACKING_ID_FM
       networks:
