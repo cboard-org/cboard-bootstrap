@@ -142,6 +142,12 @@
         - GA4_TRACKING_ID_FM
         - NEXT_PUBLIC_AZURE_SPEECH_KEY
         - NEXT_PUBLIC_AZURE_SPEECH_REGION
+        - AZURE_AD_B2C_PRIMARY_USER_FLOW
+        - AZURE_AD_B2C_TENANT_ID
+        - AZURE_AD_B2C_CLIENT_SECRET
+        - AZURE_AD_B2C_CLIENT_ID
+        - GOOGLE_CLIENT_ID
+        - GOOGLE_CLIENT_SECRET
       networks:
         - cboard-network
       depends_on:
