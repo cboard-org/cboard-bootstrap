@@ -149,6 +149,9 @@
         - AZURE_AD_B2C_CLIENT_ID
         - GOOGLE_CLIENT_ID
         - GOOGLE_CLIENT_SECRET
+        - AZURE_OPENAI_API_KEY
+        - AZURE_OPENAI_ENDPOINT
+        - NEXT_PUBLIC_GA_ID
       networks:
         - cboard-network
       depends_on:
