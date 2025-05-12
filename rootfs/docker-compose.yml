@@ -87,8 +87,8 @@
       environment:
         - PORT=80
         - MONGO_URL=mongodb://mongodb/cboard-ai-builder
-        - NEXTAUTH_SECRET
-        - NEXTAUTH_URL
+        - NEXTAUTH_SECRET=${CBUILDER_NEXTAUTH_SECRET}
+        - NEXTAUTH_URL=${CBUILDER_NEXTAUTH_URL}
         - PICTO_SERVER_ID
         - PICTO_CHANNEL_ID
         - PICTO_SALAI_TOKEN
@@ -139,8 +139,8 @@
         - EMAIL_SERVER_HOST
         - EMAIL_SERVER_PORT
         - EMAIL_FROM
-        - NEXTAUTH_SECRET
-        - NEXTAUTH_URL
+        - NEXTAUTH_SECRET=${FLUID_MIND_NEXTAUTH_SECRET}
+        - NEXTAUTH_URL=${FLUID_MIND_NEXTAUTH_URL}
         - GA4_TRACKING_ID_FM
         - NEXT_PUBLIC_AZURE_SPEECH_KEY
         - NEXT_PUBLIC_AZURE_SPEECH_REGION
