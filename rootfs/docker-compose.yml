@@ -133,7 +133,7 @@
         - AZURE_TALK_DEPLOYMENT
         - AZURE_TALK_ENDPOINT
         - MONGO_URL_FM=mongodb://mongodb/Fluid-Mind
-        - JWT_SECRET
+        - JWT_SECRET=${FLUID_MIND_JWT_SECRET}
         - EMAIL_SERVER_USER
         - EMAIL_SERVER_PASSWORD
         - EMAIL_SERVER_HOST
